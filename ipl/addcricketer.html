@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>IPL Records | Add Cricketer</title>
+  <link rel="stylesheet" type="text/css" href="style1.css" />
+</head>
+<body style="background-color:black; color:aliceblue">
+  <img src="ipl.png" height="350" alt="" />
+  <h1>IPL Records</h1>
+  <p>Enter the cricketer's first name and last name</p>
+  <form method="post" action="adddetails.php">
+    <label for="firstname">First name:</label>
+    <input type="text" id="firstname" name="firstname" required="required"/><br />
+    <label for="lastname">Last name:</label>
+    <input type="text" id="lastname" name="lastname" required="required"/><br /><br/>
+    <input type="radio" name="old_or_new" value="old" required="required">Old Record<br/>
+    <input type="radio" name="old_or_new" value="new" >New Record
+    <p></p>
+    <input type="submit" name="Submit" value="Submit" />
+  </form>
+</body>
+</html>
