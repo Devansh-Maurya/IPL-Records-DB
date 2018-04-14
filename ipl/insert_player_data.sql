@@ -16,7 +16,6 @@ CREATE TABLE player_personal
 
 CREATE TABLE player_batting
 (
-    id INT AUTO_INCREMENT NOT NULL,
     first_name VARCHAR(20) NOT NULL,
     last_name VARCHAR(20) NOT NULL,
     innings SMALLINT UNSIGNED NOT NULL,
@@ -32,11 +31,12 @@ CREATE TABLE player_batting
     PRIMARY KEY(id),
     CONSTRAINT FK_player_batting FOREIGN KEY (first_name, last_name)
     REFERENCES player_personal(first_name, last_name)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
 );
 
 CREATE TABLE player_bowling
 (
-    id INT AUTO_INCREMENT NOT NULL,
     first_name VARCHAR(20) NOT NULL,
     last_name VARCHAR(20) NOT NULL,
     innings SMALLINT UNSIGNED NOT NULL,
@@ -48,11 +48,12 @@ CREATE TABLE player_bowling
     PRIMARY KEY(id),
     CONSTRAINT FK_player_bowling FOREIGN KEY (first_name, last_name)
     REFERENCES player_personal(first_name, last_name)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
 );
 
 CREATE TABLE player_teams
 (
-    id INT AUTO_INCREMENT NOT NULL,
     first_name VARCHAR(20) NOT NULL,
     last_name VARCHAR(20) NOT NULL,
     csk BIT,
@@ -70,4 +71,20 @@ CREATE TABLE player_teams
     PRIMARY KEY(id),
     CONSTRAINT FK_player_teams FOREIGN KEY (first_name, last_name)
     REFERENCES player_personal(first_name, last_name)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
 );
+
+/*UTILITY QUERIES :*/
+
+/*1) To view all tables in the database:*/
+
+SHOW TABLES;
+
+/*2) To view the create table querie of a table*/
+
+SHOW CREATE TABLE table_name;
+
+/**3) Remove foreign key constraint*/
+
+ALTER TABLE table_name DROP FOREIGN KEY identifier;
