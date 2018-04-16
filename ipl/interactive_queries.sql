@@ -10,4 +10,4 @@ INSERT INTO player_batting VALUES ('$first_name', '$last_name',
 INSERT INTO player_bowling 
         VALUES ('$first_name', '$last_name', '$bowling_innings',
         '$bowling_ball', '$bowling_runs_given', '$bowling_wicket', '$bowling_fifer',
-        '$bowling_tenfer');
+        '$bowling_tenfer');   
