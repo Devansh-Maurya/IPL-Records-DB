@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>IPL Records | Added details</title>
+  <title>IPL Records | Submitted details</title>
   <link rel="stylesheet" type="text/css" href="style1.css" />
   <style>
     .parallax {
@@ -16,7 +16,7 @@
   </style>
 </head>
 
-<body style="background-color:black; color:aliceblue; font-family:sans-serif;">
+<body style="background-color:black; color:aliceblue; font-family:sans-serif">
 <div class="parallax">
 <div style="padding-left: 220px;">
 
@@ -47,26 +47,29 @@
     $bowling_runs_given = $_POST['bowlingrun'];
     $bowling_wicket = $_POST['wicket'];
     $bowling_fifer = $_POST['fifer'];
-    $bowling_tenfer = $_POST['tenfer'];
+    $bowling_tenfer = $_POST['tenfers'];
+
+    #$past_teams = $_POST['pastteams'];
 
     $dbc = mysqli_connect('localhost', 'root', 'Devansh$#123', 'ipl')
         or die('Error connecting to MySQL server');
     
-    $query_player_personal = "INSERT INTO player_personal ". 
-        "VALUES ('$first_name', '$last_name', '$date_of_birth',". 
-        "'$birth_city', '$birth_state', '$position', '$team', '$match_played')";
+    $query_player_personal = "UPDATE player_personal SET ". 
+        "date_of_birth = '$date_of_birth', birth_city = '$birth_city', position = '$position', ".
+        "team = '$team', match_played = '$match_played', birth_state = '$birth_state'".
+        "WHERE first_name = '$first_name' AND last_name = '$last_name'";
     
-    $query_player_batting = "INSERT INTO player_batting ".
-        "VALUES ('$first_name', '$last_name', ".
-        "'$batting_innings', '$batting_not_out', ".
-        "'$batting_runs_scored', '$batting_highscore', '$batting_ball_faced',".
-        "'$batting_hundred', '$batting_double_hundred', '$batting_fifty',".
-        "'$batting_four', '$batting_six')";
+    $query_player_batting = "UPDATE player_batting SET ".
+        "innings = '$batting_innings', not_out = '$batting_not_out', ".
+        "runs_scored = '$batting_runs_scored', highscore = '$batting_highscore', ball_faced = '$batting_ball_faced',".
+        "hundred = '$batting_hundred', double_hundred = '$batting_double_hundred', fifty = '$batting_fifty',".
+        "four = '$batting_four', six = '$batting_six'".
+        "WHERE first_name = '$first_name' AND last_name = '$last_name'";
     
-    $query_player_bowling = "INSERT INTO player_bowling ".
-        "VALUES ('$first_name', '$last_name', '$bowling_innings',".
-        "'$bowling_ball', '$bowling_runs_given', '$bowling_wicket', '$bowling_fifer',".
-        "'$bowling_tenfer')";
+    $query_player_bowling = "UPDATE player_bowling SET ".
+        "innings = '$bowling_innings', ball = '$bowling_ball', wicket = '$bowling_wicket', ".
+        "runs_given = '$bowling_runs_given', fifer = '$bowling_fifer', tenfer = '$bowling_tenfer'".
+        "WHERE first_name = '$first_name' AND last_name = '$last_name'";
 
     $result_player_personal = mysqli_query($dbc, $query_player_personal)
         or die('Error querying database for player_personal table');
@@ -82,7 +85,7 @@
     echo '<h2>Thanks for submitting the form</h2><br />';
     echo '<h3>Following details were written in the database:</h3><br />';
     echo '<h4><br />Personal details of the Player:</h4><br />';
-    echo 'First Name : '.$first_name.'<br />';
+    echo '<label>First Name :</label>'.$first_name.'<br />';
     echo 'Last Name : '.$last_name.'<br />';
     echo 'Date of Birth : '.$date_of_birth.'<br />';
     echo 'Birth Place : '.$birth_city.', '.$birth_state.'<br />';
@@ -95,7 +98,7 @@
     echo 'Not Outs : '.$batting_not_out.'<br />';
     echo 'Runs scored : '.$batting_runs_scored.'<br />';
     echo 'Highscore : '.$batting_highscore.'<br />';
-    echo 'Balls Faced : '.$batting_ball_faced.'<br />';
+    echo 'Ball Faced : '.$batting_ball_faced.'<br />';
     echo 'Hundreds : '.$batting_hundred.'<br />';
     echo 'Double hundreds : '.$batting_double_hundred.'<br />';
     echo 'Fifties : '.$batting_fifty.'<br />';

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Get Something | IPL Records</title>
+  <link rel="stylesheet" type="text/css" href="style1.css" />
+  <style>
+    .parallax {
+      background-image: url("stadiumb.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body style="background-color:black; color:aliceblue; font-family:sans-serif; text-align : center;">
+<div class="parallax">
+
+  <img src="ipl.png" height="350" alt="" />
+  <h1>Welcome to IPL Records</h1>
+  <p><h2>Make A Choice</h2></p>
+  
+  <div style=" padding-bottom:40px">
+  <form method="post" action="playerprofileview.html" style="display : inline-block;">
+    <input type="submit" id="playerprofile" name="playerprofile" value="View Player Profile" style="padding: 10px 20px;"/>
+  </form>
+  <p></p>
+  <form method="post" action="choicesresult.php" style="display:inline-block">
+    <input type="submit" id="mostruns" name="mostruns" value="Most Runs" style="padding: 10px 20px;"/>
+    <input type="submit" id="mostwickets" name="mostwickets" value="Most Wickets" style="padding: 10px 20px;"/>
+    <input type="submit" id="bestbattingstrikerate" name="bestbattingstrikerate" value="Best Batting Strike Rate" style="padding: 10px 20px;"/>
+    <input type="submit" id="bestbattingaverage" name="bestbattingaverage" value="Best Batting Average" style="padding: 10px 20px;"/>
+    <input type="submit" id="besteconomy" name="besteconomy" value="Best Economy" style="padding: 10px 20px;"/>
+  </form>
+  </div>
+</div>
+</div>
+</body>
+</html>
