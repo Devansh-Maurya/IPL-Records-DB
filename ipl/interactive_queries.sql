@@ -29,3 +29,32 @@ UPDATE player_bowling SET
         runs_given = '$bowling_runs_given', fifer = '$bowling_fifer', tenfer = '$bowling_tenfer'
         WHERE first_name = '$first_name' AND last_name = '$last_name';
 
+/*adding sql queries from choiceresult.php*/
+
+
+Here are the players with the most runs :
+
+"SELECT first_name, last_name, runs_scored FROM player_batting ".
+            "ORDER BY runs_scored desc";
+            
+ Here are the players with the most wickets :
+ 
+  "SELECT first_name, last_name, wicket FROM player_bowling ".
+            "ORDER BY wicket desc";
+  Here are the players with the best batting strike rates :
+  
+  "SELECT first_name, last_name, runs_scored/ball_faced*100 AS strike_rate ".
+            "FROM player_batting ORDER BY strike_rate desc";
+            
+   Here are the players with the best batting averages :   
+   
+   "SELECT first_name, last_name, runs_scored/(innings - not_out) AS average ".
+            "FROM player_batting ORDER BY average desc";
+            
+  Here are the players with the best economy :
+  
+   "SELECT first_name, last_name, runs_given/ball*6 AS economy FROM player_bowling ".
+            "ORDER BY economy desc";
+        
+            
+ 
