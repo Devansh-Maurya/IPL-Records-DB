@@ -69,7 +69,11 @@
 
     if($record_player_bowling['wicket'] > 0) {
         $bowling_strike_rate = $record_player_bowling['ball'] / $record_player_bowling['wicket'];
+<<<<<<< HEAD
         $bowling_average = $record_player_bowling['runs_given'] / $record_player_bowling['wicket'];
+=======
+        $bowling_average = $record_player_bowling['runs'] / $record_player_bowling['wicket'];
+>>>>>>> e711edaba78e753382566da03d7c6e0bce834e73
     }
     else {
         $bowling_strike_rate = "Not defined";
@@ -84,7 +88,11 @@
     }
 
     echo '<h2>Thanks for submitting the form</h2><br />';
+<<<<<<< HEAD
     echo '<h3>Here is the profile of '.$record_player_personal['first_name'].' '.$record_player_personal['last_name'].':</h3><br />';
+=======
+    echo '<h3>Following details were written in the database:</h3><br />';
+>>>>>>> e711edaba78e753382566da03d7c6e0bce834e73
     echo '<h4><br />Personal details of the Player:</h4><br />';
     echo '<label>First Name :</label>'.$record_player_personal['first_name'].'<br />';
     echo 'Last Name : '.$record_player_personal['last_name'].'<br />';
@@ -113,7 +121,10 @@
     echo 'Innings : '.$record_player_bowling['innings'].'<br />';
     echo 'Balls Bowled : '.$record_player_bowling['ball'].'<br />';
     echo 'Runs Given : '.$record_player_bowling['runs_given'].'<br />';
+<<<<<<< HEAD
     echo 'Wickets : '.$record_player_bowling['wicket'].'<br />';
+=======
+>>>>>>> e711edaba78e753382566da03d7c6e0bce834e73
     echo 'Economy : '.round($bowling_economy, 2).'</br>';
     echo 'Average : '.round($bowling_average, 2).'<br/>';
     echo 'Strike rate : '.round($bowling_strike_rate, 2).'<br />';

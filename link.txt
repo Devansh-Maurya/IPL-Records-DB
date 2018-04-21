@@ -1,0 +1,7 @@
+JAVA:
+https://www.developer.com/java/creating-a-jdbc-gui-application.html
+
+http://archive.oreilly.com/oreillyschool/courses/java4/java413.html
+
+C++:
+https://www.daniweb.com/programming/software-development/threads/77173/c-gui-graphical-user-interface-for-beginners
