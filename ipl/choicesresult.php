@@ -60,7 +60,6 @@ $dbc = mysqli_connect('localhost', 'root', 'Devansh$#123', 'ipl')
         }
     }
 
-<<<<<<< HEAD
     elseif($_POST['highscore']) {
         echo '<h2><strong>Here are the players with the highest runs in an innings:</strong></h2>';
         $query_player_batting = "SELECT first_name, last_name, highscore FROM player_batting ".
@@ -74,8 +73,6 @@ $dbc = mysqli_connect('localhost', 'root', 'Devansh$#123', 'ipl')
         }
     }
 
-=======
->>>>>>> e711edaba78e753382566da03d7c6e0bce834e73
     elseif($_POST['mostwickets']) {
         echo '<h2><strong>Here are the players with the most wickets :</strong></h2>';
         $query_player_bowling = "SELECT first_name, last_name, wicket FROM player_bowling ".
@@ -85,7 +82,6 @@ $dbc = mysqli_connect('localhost', 'root', 'Devansh$#123', 'ipl')
             or die('Error querying database for player_batting table');
         
         while($record_player_bowling = mysqli_fetch_array($result_player_bowling)) {
-<<<<<<< HEAD
             if($record_player_bowling['wicket'] > 0) {
                 echo '<strong>'.$record_player_bowling['first_name'].' '.$record_player_bowling['last_name'].' : </strong>'.$record_player_bowling['wicket'].'<br />';
             }
@@ -93,13 +89,6 @@ $dbc = mysqli_connect('localhost', 'root', 'Devansh$#123', 'ipl')
     }
 
     elseif($_POST['bestbattingstrikerate']) {
-=======
-            echo '<strong>'.$record_player_bowling['first_name'].' '.$record_player_bowling['last_name'].' : </strong>'.$record_player_bowling['wicket'].'<br />';
-        }
-    }
-
-    if($_POST['bestbattingstrikerate']) {
->>>>>>> e711edaba78e753382566da03d7c6e0bce834e73
         echo '<h2><strong>Here are the players with the best batting strike rates :</strong></h2>';
         $query_player_batting = "SELECT first_name, last_name, runs_scored/ball_faced*100 AS strike_rate ".
             "FROM player_batting ORDER BY strike_rate desc";
@@ -112,11 +101,7 @@ $dbc = mysqli_connect('localhost', 'root', 'Devansh$#123', 'ipl')
         }
     }
 
-<<<<<<< HEAD
     elseif($_POST['bestbattingaverage']) {
-=======
-    if($_POST['bestbattingaverage']) {
->>>>>>> e711edaba78e753382566da03d7c6e0bce834e73
         echo '<h2><strong>Here are the players with the best batting averages :</strong></h2>';
         $query_player_batting = "SELECT first_name, last_name, runs_scored/(innings - not_out) AS average ".
             "FROM player_batting ORDER BY average desc";
@@ -129,23 +114,15 @@ $dbc = mysqli_connect('localhost', 'root', 'Devansh$#123', 'ipl')
         }
     }
 
-<<<<<<< HEAD
     elseif($_POST['besteconomy']) {
         echo '<h2><strong>Here are the players with the best economy :</strong></h2>';
         $query_player_bowling = "SELECT first_name, last_name, runs_given/ball*6 AS economy FROM player_bowling ".
             "ORDER BY economy asc";
-=======
-    if($_POST['besteconomy']) {
-        echo '<h2><strong>Here are the players with the best economy :</strong></h2>';
-        $query_player_bowling = "SELECT first_name, last_name, runs_given/ball*6 AS economy FROM player_bowling ".
-            "ORDER BY economy desc";
->>>>>>> e711edaba78e753382566da03d7c6e0bce834e73
         
         $result_player_bowling = mysqli_query($dbc, $query_player_bowling)
             or die('Error querying database for player_batting table');
         
         while($record_player_bowling = mysqli_fetch_array($result_player_bowling)) {
-<<<<<<< HEAD
             if($record_player_bowling['economy']>0) {
             echo '<strong>'.$record_player_bowling['first_name'].' '.$record_player_bowling['last_name'].' : </strong>'.round($record_player_bowling['economy'],2).'<br/>';
             }
@@ -199,11 +176,4 @@ $dbc = mysqli_connect('localhost', 'root', 'Devansh$#123', 'ipl')
         }
     }
     
-=======
-            echo '<strong>'.$record_player_bowling['first_name'].' '.$record_player_bowling['last_name'].' : </strong>'.$record_player_bowling['economy'].'<br/>';
-        }
-    }
-
-
->>>>>>> e711edaba78e753382566da03d7c6e0bce834e73
     echo '<h2>Thank you !</h2><br />';
