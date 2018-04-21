@@ -1,3 +1,10 @@
+<?php
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if(($username == ipldb) && ($password == ipldb)) {
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,6 +37,13 @@
   </form>
   </div>
 </div>
-</div>
 </body>
 </html>
+
+<?php
+    }
+    else {
+      header('Location: http://localhost/cricket/ipl/login.php?loginstatus=incorrect');
+      exit;
+    }
+?>
