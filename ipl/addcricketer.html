@@ -20,19 +20,19 @@
   </style>
 </head>
 <body style="background-color:black; color:aliceblue; font-family:sans-serif; text-align : center">
-<div class="parallax">
+<div class="parallax" style=" padding-bottom:220px">
 
   <img src="ipl.png" height="350" alt="Indian Premier League" style="max-width:100%;height:auto;"/>
   <h1>Welcome to IPL Records</h1>
   <p><h2>Enter the cricketer's first name and last name</h2></p>
   <div style=" padding-bottom:40px">
   <form method="post" action="adddetails.php" >
-    <label for="firstname">First name:</label>
-    <input type="text" id="firstname" name="firstname" required="required" autocomplete="on" width="220px"/>
-    <label for="lastname">Last name:</label>
+    <label for="firstname" style="padding-right:80px">First name:</label>
+    <input type="text" id="firstname" name="firstname" required="required" autocomplete="on" width="220px"/><br><br>
+    <label for="lastname" style="padding-right:80px">Last name:</label>
     <input type="text" id="lastname" name="lastname" required="required" autocomplete="on"/><br /><br/>
-    <input type="radio" name="old_or_new" value="old" required="required">Old Record<br/>
-    <input type="radio" name="old_or_new" value="new" >New Record
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Old Record<input type="radio" name="old_or_new" value="old" required="required"><br/>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;New Record<input type="radio" name="old_or_new" value="new" >
     <p></p>
     <input type="submit" name="Submit" value="Submit" style="padding: 10px 20px;"/>
   </form>
