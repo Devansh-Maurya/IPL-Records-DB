@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Make A choice | IPL Records</title>
+  <title>Login | IPL Records</title>
   <link rel="stylesheet" type="text/css" href="style1.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
@@ -29,7 +29,7 @@
         echo "<p><h2>Incorrect username or password !<br>Try again</h2></p>";
     }
     else {
-        echo "<p><h2>Enter your log in credentials</h2></p>";
+        echo "<p><h2>Enter your login credentials</h2></p>";
     }
   ?>
   
@@ -40,7 +40,7 @@
         <label for="password"  style=" padding-right:80px">Password:</label>
         <input type="password" id="password" name="password" required="required" autocomplete="on" autocomplete="current-password" width="220px"/><br/><br/>
         <p></p>
-        <input type="submit" id="set" name="set" value="LOG IN" style="padding: 16px 32px;"/>
+        <input type="submit" id="set" name="set" value="LOGIN" style="padding: 16px 32px;"/>
   </form>
   </div>
 </div>
