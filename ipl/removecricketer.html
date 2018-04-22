@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Remove Cricketer | IPL Records</title>
+  <link rel="stylesheet" type="text/css" href="style1.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
+  <link rel="icon" href="/icon.ico" type="image/x-icon">
+  <style>
+    .parallax {
+      background-image: url("stadiumb.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      max-width:100%;
+      height:auto;
+    }
+  </style>
+</head>
+<body style="background-color:black; color:aliceblue; font-family:sans-serif; text-align : center">
+<div class="parallax" style=" padding-bottom:220px">
+
+  <img src="ipl.png" height="350" alt="Indian Premier League" style="max-width:100%;height:auto;"/>
+  <p><h1>Enter the cricketer's first name and last name</h1></p>
+  <div style=" padding-bottom:40px">
+  <form method="post" action="remove.php" >
+    <label for="firstname" style="padding-right:80px">First name:</label>
+    <input type="text" id="firstname" name="firstname" required="required" autocomplete="on" width="220px"/><br><br>
+    <label for="lastname" style="padding-right:80px">Last name:</label>
+    <input type="text" id="lastname" name="lastname" required="required" autocomplete="on"/><br /><br/>
+    <p></p>
+    <input type="submit" name="Submit" value="Remove" style="padding: 10px 20px;"/>
+  </form>
+  </div>
+</div>
+</body>
+</html>
