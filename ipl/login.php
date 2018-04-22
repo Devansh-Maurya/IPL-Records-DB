@@ -33,7 +33,7 @@
         <label for="username" style=" padding-right:80px">Username:</label>
         <input type="text" id="username" name="username" required="required" autocomplete="on" width="220px"/><br/><br/>
         <label for="password"  style=" padding-right:80px">Password:</label>
-        <input type="text" id="password" name="password" required="required" autocomplete="on" width="220px"/><br/><br/>
+        <input type="password" id="password" name="password" required="required" autocomplete="on" autocomplete="current-password" width="220px"/><br/><br/>
         <p></p>
         <input type="submit" id="set" name="set" value="LOG IN" style="padding: 16px 32px;"/>
   </form>

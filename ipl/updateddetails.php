@@ -49,8 +49,6 @@
     $bowling_fifer = $_POST['fifer'];
     $bowling_tenfer = $_POST['tenfers'];
 
-    #$past_teams = $_POST['pastteams'];
-
     $dbc = mysqli_connect('localhost', 'root', 'Devansh$#123', 'ipl')
         or die('Error connecting to MySQL server');
     

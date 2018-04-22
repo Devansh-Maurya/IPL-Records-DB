@@ -26,12 +26,13 @@
 
   <img src="ipl.png" height="350" alt="" />
   <h1>Welcome to IPL Records</h1>
-  <p><h2>Enter your log in credentials</h2></p>
+  <p><h2>Please select an option</h2></p>
   
   <div style=" padding-bottom:40px">
   <form method="post" action="addcricketer.html" style="display : inline-block;">
         <input type="submit" id="set" name="set" value="Add or Update Player Details" style="padding: 16px 32px;"/>
   </form>
+  <p></p>
   <form method="post" action="removecricketer.html" style="display : inline-block;">
         <input type="submit" id="set" name="set" value="Remove a Player" style="padding: 16px 32px;"/>
   </form>
