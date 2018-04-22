@@ -21,13 +21,15 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      max-width:100%;
+      height:auto;
     }
   </style>
 </head>
 <body style="background-color:black; color:aliceblue; font-family:sans-serif; text-align : center;">
 <div class="parallax">
 
-  <img src="ipl.png" height="350" alt="" />
+  <img src="ipl.png" height="350" alt="" style="max-width:100%;height:auto;"/>
   <h1>Welcome to IPL Records</h1>
   <p><h2>Please select an option</h2></p>
   
