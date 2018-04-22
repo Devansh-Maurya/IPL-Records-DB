@@ -4,6 +4,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>IPL Records | Added details</title>
   <link rel="stylesheet" type="text/css" href="style1.css" />
+  <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
+  <link rel="icon" href="/icon.ico" type="image/x-icon">
   <style>
     .parallax {
 

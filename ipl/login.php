@@ -4,6 +4,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Make A choice | IPL Records</title>
   <link rel="stylesheet" type="text/css" href="style1.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
+  <link rel="icon" href="/icon.ico" type="image/x-icon">
   <style>
     .parallax {
       background-image: url("stadiumb.jpg");
