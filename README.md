@@ -1,4 +1,4 @@
-# SEM-4-Database-Project
+# IPL Records DB
 
 ## Steps to set up a server on Linux Mint
 
